@@ -1,0 +1,29 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% for msg in messages%}
+{{ msg }}
+{% endfor %}
+<form action="" method="post">
+    {% csrf_token %}
+
+    <label for=""> username:</label>
+    <input type="text" name="username" placeholder="enter the usrename">
+
+<label for=""> password:</label>
+     <input type="password" name="password" placeholder="enter the password">
+
+   <input type="submit" value="login">
+</form>
+{% endblock %}
+
+<!--</body>-->
+<!--</html>-->
